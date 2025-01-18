@@ -33,15 +33,48 @@
       <!-- modal nilai -->
        <div class="modal" id="modal">
         <div class="modal__content">
-            <h3>Masukan nilai</h3>
-            <form>
-                <div class="wrapper__input">
+            <h3>Nilai</h3>
+            <p>Harap masukan dengan benar!!!</p>
+            <div class="wrapper__input" style="margin-top: 1.3rem;">
+                <label for="name">Name</label>
+                <input type="text" placeholder="name..." id="name" style="width: auto;" required>
+            </div>
+            <div class="form">
+                <div class="wrapper__input mtk">
                     <label for="mtk">MTK</label>
-                    <input type="text" placeholder="" id="mtk" name="mtk" required>
+                    <input type="text" placeholder="nilai..." id="mtk" name="mtk" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                 </div>
+                <div class="wrapper__input bindo">
+                    <label for="Bindo">Bindo</label>
+                    <input type="text" placeholder="nilai..." id="Bindo" name="Bindo" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                </div>
+                <div class="wrapper__input bing">
+                    <label for="Bing">Bing</label>
+                    <input type="text" placeholder="nilai..." id="Bing" name="Bing" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                </div>
+                <div class="wrapper__input ipas">
+                    <label for="Ipas">Ipas</label>
+                    <input type="text" placeholder="nilai..." id="Ipas" name="Ipas" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                </div>
+                <div class="wrapper__input sejarah">
+                    <label for="Sejarah">Sejarah</label>
+                    <input type="text" placeholder="nilai..." id="Sejarah" name="Sejarah" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                </div>
+                <div class="wrapper__input agama">
+                    <label for="Agama">Agama</label>
+                    <input type="text" placeholder="nilai..." id="Agama" name="Agama" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                </div>
+                <div class="wrapper__input informatika">
+                    <label for="Infomatika">Informatika</label>
+                    <input type="text" placeholder="nilai..." id="Infomatika" name="Infomatika" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                </div>
+
                 
-            </form>
-            <button class="close__btn" id="closeModal">close</button>
+            </div>
+            <div class="wrapper__btn__input">
+                <button class="btn__close" id="closeModal">Close</button>
+                <button class="btn__submit" id="submit">Submit</button>
+            </div>
         </div>
        </div>
     </div>
