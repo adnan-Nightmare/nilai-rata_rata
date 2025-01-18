@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site</title>
+
+    <!-- css reset -->
+    <link rel="stylesheet" href="./src/css/reset.css" />
+
+    <!-- css style -->
+    <link rel="stylesheet" href="./src/css/style.css" />
+
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/42eebd283f.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+        <!-- header -->
+      <header class="wrapper__header">
+        <h1>Raport</h1>
+
+        <div class="wrapper__items">
+          <div class="wrapper__calender">
+            <i class="fa-regular fa-calendar"></i>
+            <p id="date">Jan 20, 2023 - Feb 09, 2023</p>
+          </div>
+
+          <button class="btn__nilai" id="openModal">Nilai</button>
+        </div>
+      </header>
+
+      <!-- modal nilai -->
+       <div class="modal" id="modal">
+        <div class="modal__content">
+            <h3>Masukan nilai</h3>
+            <form>
+                <div class="wrapper__input">
+                    <label for="mtk">MTK</label>
+                    <input type="text" placeholder="" id="mtk" name="mtk" required>
+                </div>
+                
+            </form>
+            <button class="close__btn" id="closeModal">close</button>
+        </div>
+       </div>
+    </div>
+
+    <script type="module" src="./src/js/main.js"></script>
+    <script src="./src/js/date.js"></script>
+    <script src="./src/js/modal.js"></script>
+  </body>
+</html>
