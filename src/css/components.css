@@ -1,0 +1,60 @@
+.container__table{
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.container__table > h1{
+    margin-bottom: 0.2rem;
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
+    font-weight: 700;
+}
+
+.container__table > p{
+    color: #4b5563;
+    margin-bottom: 2rem;
+}
+
+.wrapper__table{
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    background: #f3f4f6;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+.wrapper__table > table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.wrapper__table > table > tr, th{
+    padding: 0.5rem 1rem;
+    color: #6b7280;
+    border-bottom: 1px solid #d1d5db;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.th__center{
+    padding-top: 0rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.th__content{
+    width: 10rem;
+}
+
+.wrapper__table > table > tr, td{
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.tr__border__top{
+    border-top: 1px solid #d1d5db;
+}

@@ -11,12 +11,15 @@
     <!-- css style -->
     <link rel="stylesheet" href="./src/css/style.css" />
 
+    <!-- css component -->
+    <link rel="stylesheet" href="./src/css/components.css" />
+
     <!-- icon -->
     <script src="https://kit.fontawesome.com/42eebd283f.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container">
-        <!-- header -->
+      <!-- header -->
       <header class="wrapper__header">
         <h1>Raport</h1>
 
@@ -31,52 +34,84 @@
       </header>
 
       <!-- modal nilai -->
-       <div class="modal" id="modal">
+      <div class="modal" id="modal">
         <div class="modal__content">
-            <h3>Nilai</h3>
-            <p>Harap masukan dengan benar!!!</p>
-            <div class="wrapper__input" style="margin-top: 1.3rem;">
-                <label for="name">Name</label>
-                <input type="text" placeholder="name..." id="name" style="width: auto;" required>
+          <h3>Nilai</h3>
+          <p>Harap masukan dengan benar!!!</p>
+          <div class="wrapper__input" style="margin-top: 1.3rem">
+            <label for="name">Name</label>
+            <input type="text" placeholder="name..." id="name" style="width: auto" required />
+          </div>
+          <div class="form">
+            <div class="wrapper__input mtk">
+              <label for="mtk">MTK</label>
+              <input type="text" placeholder="nilai..." id="Mtk" name="mtk" oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
             </div>
-            <div class="form">
-                <div class="wrapper__input mtk">
-                    <label for="mtk">MTK</label>
-                    <input type="text" placeholder="nilai..." id="mtk" name="mtk" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                </div>
-                <div class="wrapper__input bindo">
-                    <label for="Bindo">Bindo</label>
-                    <input type="text" placeholder="nilai..." id="Bindo" name="Bindo" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                </div>
-                <div class="wrapper__input bing">
-                    <label for="Bing">Bing</label>
-                    <input type="text" placeholder="nilai..." id="Bing" name="Bing" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                </div>
-                <div class="wrapper__input ipas">
-                    <label for="Ipas">Ipas</label>
-                    <input type="text" placeholder="nilai..." id="Ipas" name="Ipas" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                </div>
-                <div class="wrapper__input sejarah">
-                    <label for="Sejarah">Sejarah</label>
-                    <input type="text" placeholder="nilai..." id="Sejarah" name="Sejarah" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                </div>
-                <div class="wrapper__input agama">
-                    <label for="Agama">Agama</label>
-                    <input type="text" placeholder="nilai..." id="Agama" name="Agama" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                </div>
-                <div class="wrapper__input informatika">
-                    <label for="Infomatika">Informatika</label>
-                    <input type="text" placeholder="nilai..." id="Infomatika" name="Infomatika" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                </div>
-
-                
+            <div class="wrapper__input bindo">
+              <label for="Bindo">Bindo</label>
+              <input type="text" placeholder="nilai..." id="Bindo" name="Bindo" oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
             </div>
-            <div class="wrapper__btn__input">
-                <button class="btn__close" id="closeModal">Close</button>
-                <button class="btn__submit" id="submit">Submit</button>
+            <div class="wrapper__input bing">
+              <label for="Bing">Bing</label>
+              <input type="text" placeholder="nilai..." id="Bing" name="Bing" oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
             </div>
+            <div class="wrapper__input ipas">
+              <label for="Ipas">Ipas</label>
+              <input type="text" placeholder="nilai..." id="Ipas" name="Ipas" oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
+            </div>
+            <div class="wrapper__input sejarah">
+              <label for="Sejarah">Sejarah</label>
+              <input type="text" placeholder="nilai..." id="Sejarah" name="Sejarah" oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
+            </div>
+            <div class="wrapper__input agama">
+              <label for="Agama">Agama</label>
+              <input type="text" placeholder="nilai..." id="Agama" name="Agama" oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
+            </div>
+            <div class="wrapper__input informatika">
+              <label for="Infomatika">Informatika</label>
+              <input type="text" placeholder="nilai..." id="Infomatika" name="Infomatika" oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
+            </div>
+          </div>
+          <div class="wrapper__btn__input">
+            <button class="btn__close" id="closeModal">Close</button>
+            <button class="btn__submit" id="submit">Submit</button>
+          </div>
         </div>
-       </div>
+      </div>
+
+      <!-- content -->
+      <div class="container__table">
+        <h1>Data</h1>
+        <p>Data nilai siswa</p>
+
+        <div class="wrapper__table">
+          <table>
+            <thead>
+              <tr>
+                <th rowspan="2" style="border-right: 1px solid #d1d5db">No</th>
+                <th rowspan="2" class="th__content th__center" style="border-right: 1px solid #d1d5db">Name</th>
+                <th colspan="7">Nilai Mata Pelajaran</th>
+                <th rowspan="2" style="border-right: 1px solid #d1d5db; border-left: 1px solid #d1d5db">Rata-rata</th>
+                <th rowspan="2" style="border-right: 1px solid #d1d5db">Peringkat</th>
+                <th rowspan="2" style="border-right: 1px solid #d1d5db">Keterangan</th>
+              </tr>
+              <tr>
+                <th>MTK</th>
+                <th>Bindo</th>
+                <th>Bing</th>
+                <th>IPAS</th>
+                <th>Sejarah</th>
+                <th>Agama</th>
+                <th>Informatika</th>
+              </tr>
+            </thead>
+
+            <tbody id="tableBody">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="./src/js/main.js"></script>
