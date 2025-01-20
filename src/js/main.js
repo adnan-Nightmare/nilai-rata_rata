@@ -1,7 +1,6 @@
 import { result, lulus, nilaiValid, peringkat } from "./nilaiCheck.js";
 
 const onSubmit = document.getElementById("submit");
-const output = document.getElementById("output");
 const modal = document.getElementById("modal");
 
 // saat dimulai
@@ -46,6 +45,13 @@ function showData() {
   const items = [];
 
   let no = 0;
+  let lulus = 0;
+  let tidak = 0;
+
+  const siswa = document.getElementById("siswa");
+  const lulusId = document.getElementById("naik");
+  const tidakId = document.getElementById("tidak");
+
   const tableBody = document.getElementById("tableBody");
   tableBody.innerHTML = "";
 
@@ -55,12 +61,20 @@ function showData() {
     items.push({ name, nilai });
   }
 
+  // console.log(items)
+
   const data = hitung(items);
 
   for (let j = 0; j < data.length; j++) {
     const org = data[j];
     console.log(org);
     no++;
+
+    if (org.nilai.ket === "Naik kelas") {
+      lulus++;
+    } else {
+      tidak++;
+    }
 
     const tr = document.createElement("tr");
     tr.className = "tr__border__top";
@@ -89,6 +103,10 @@ function showData() {
 
     tableBody.appendChild(tr);
   }
+
+  siswa.textContent = no;
+  lulusId.textContent = lulus;
+  tidakId.textContent = tidak;
 }
 
 function hitung(items) {
